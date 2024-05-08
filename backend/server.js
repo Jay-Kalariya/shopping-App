@@ -6,13 +6,13 @@ const connectDB = require("./config/db");
 connectDB();
 
 const app = express();
-// app.use(cors(
-//   {
-//     origin: ["https://dploy/vercel"],
-//     methods: ["POST", "GET"],
-//     credentials: true
-//   }
-// ));
+app.use(cors(
+  {
+    origin: ["https://shopping-app-tlst.onrender.com/"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+));
 app.use(express.json());
 
 app.get("/", (req, res) => {
