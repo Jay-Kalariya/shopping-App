@@ -8,9 +8,8 @@ connectDB();
 const app = express();
 app.use(cors(
   {
-    origin: ["https://shopping-app-tlst.onrender.com/"],
-    methods: ["POST", "GET"],
-    credentials: true
+    origin: "*",
+    credentials: true,
   }
 ));
 app.use(express.json());
